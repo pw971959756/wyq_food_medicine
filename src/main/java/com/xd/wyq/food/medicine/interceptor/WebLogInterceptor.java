@@ -28,7 +28,7 @@ public class WebLogInterceptor implements HandlerInterceptor {
     @Resource
     private HttpServletRequest request;
 
-    @Pointcut("execution(* com.xd.wyq.brand.influence.controller*..*(..))")
+    @Pointcut("execution(* com.xd.wyq.food.medicine.comtroller*..*(..))")
     public void log() {
         logger.info(request.getParameterMap());
     }

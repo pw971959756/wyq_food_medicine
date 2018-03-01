@@ -40,6 +40,14 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <!-- 请求拦截器 Logger -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.xd.wyq.food.medicine.interceptor.WebLogInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!-- 处理请求时返回json字符串的中文乱码问题 -->
     <mvc:annotation-driven>
         <mvc:message-converters>
